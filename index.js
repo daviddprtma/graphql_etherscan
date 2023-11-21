@@ -12,6 +12,10 @@ const resolvers = {
     getTotalSupplyEth: (root, _args, { dataSources }) =>
       dataSources.ethDataSource.totalSupplyOfEther(),
     //Paste Code for New Resolver Functions
+    getEthPrice: (root, _args, { dataSources }) =>
+    dataSources.ethDataSource.getLatestEthereumPrice(),
+    getEstimationTimePerTransaction: (root, _args, { dataSources }) =>
+    dataSources.ethDataSource.getBlockConfirmationTime(),
   },
 };
 
